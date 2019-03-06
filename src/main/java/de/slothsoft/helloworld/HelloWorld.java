@@ -12,38 +12,39 @@ import javafx.stage.Stage;
 
 public class HelloWorld extends Application {
 
-    public static void main(String[] args) {
-	launch(args);
-    }
+	public static void main(String[] args) {
+		launch(args);
+	}
 
-    @Override
-    public void start(Stage primaryStage) {
-	final TextField nameText = new TextField();
-	nameText.setText("Stef");
-	nameText.setLayoutX(10);
-	nameText.setLayoutY(10);
+	@Override
+	public void start(Stage primaryStage) {
+		final TextField nameText = new TextField();
+		nameText.setText("Stef");
+		nameText.setLayoutX(10);
+		nameText.setLayoutY(10);
 
-	final Button button = new Button();
-	button.setLayoutX(160);
-	button.setLayoutY(10);
-	button.setText("Greet me!");
+		final Button button = new Button();
+		button.setLayoutX(160);
+		button.setLayoutY(10);
+		button.setText("Greet me!");
 
-	final Label greetingLabel = new Label();
-	greetingLabel.setLayoutX(10);
-	greetingLabel.setLayoutY(40);
+		final Label greetingLabel = new Label();
+		greetingLabel.setLayoutX(10);
+		greetingLabel.setLayoutY(40);
 
-	button.setOnAction(new EventHandler<ActionEvent>() {
+		button.setOnAction(new EventHandler<ActionEvent>() {
 
-	    public void handle(ActionEvent event) {
-		greetingLabel.setText("Hello " + nameText.getText() + "!");
-	    }
-	});
+			@Override
+			public void handle(ActionEvent event) {
+				greetingLabel.setText("Hello " + nameText.getText() + "!");
+			}
+		});
 
-	Group root = new Group();
-	root.getChildren().addAll(nameText, button, greetingLabel);
+		final Group root = new Group();
+		root.getChildren().addAll(nameText, button, greetingLabel);
 
-	primaryStage.setTitle("Hello World");
-	primaryStage.setScene(new Scene(root, 240, 70));
-	primaryStage.show();
-    }
+		primaryStage.setTitle("Hello World");
+		primaryStage.setScene(new Scene(root, 240, 70));
+		primaryStage.show();
+	}
 }
