@@ -1,6 +1,6 @@
 # JavaFX / Maven Example
 
-[![Build Status](https://travis-ci.org/slothsoft/example-javafx-maven.svg?branch=master)](https://travis-ci.org/slothsoft/example-javafx-maven)
+[![Build Status](https://travis-ci.org/slothsoft/example-javafx-maven.svg?branch=java8)](https://travis-ci.org/slothsoft/example-javafx-maven)
 
 - **Author:** [Stef Schulz](mailto:s.schulz@slothsoft.de)
 - **Repository:** <https://github.com/slothsoft/example-javafx-maven>
@@ -9,7 +9,7 @@
 
 This example shows how to create Hello World application using JavaFX and Maven. A step by step description can be found here.
 
-![Screenshot](https://raw.githubusercontent.com/slothsoft/example-javafx-maven/master/readme/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/slothsoft/example-javafx-maven/java8/readme/screenshot.png)
 
 
 **Content of this file:**
@@ -32,7 +32,7 @@ You need at least **Java 8** or above to run the code.
 
 ### Using the Example
 
-Checkout this project and run the [MainApplication](https://github.com/slothsoft/example-javafx-maven/blob/master/src/main/java/de/slothsoft/helloworld/HelloWorld.java).
+Checkout this project and run the [MainApplication](https://github.com/slothsoft/example-javafx-maven/blob/java8/src/main/java/de/slothsoft/helloworld/HelloWorld.java).
      
           
 
@@ -132,7 +132,7 @@ Amazingly, the class compiles. If it does not, you might want to check that your
 
 So now we can start our masterpiece:
 
-![Screenshot](https://raw.githubusercontent.com/slothsoft/example-javafx-maven/master/readme/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/slothsoft/example-javafx-maven/java8/readme/screenshot.png)
 
 Additionally, now Maven is able to compile our project. But of course, the JAR won't start because it doesn't know where our `main()` method is. We will change that by adding
 
