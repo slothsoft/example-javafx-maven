@@ -25,7 +25,7 @@ This example shows how to create Hello World application using JavaFX and Maven.
 
 ### Prerequisites
 
-You need at least **Java 7** or above to run the code.
+You need at least **Java 8** or above to run the code.
 
 
 
@@ -41,7 +41,8 @@ Checkout this project and run the [MainApplication](https://github.com/slothsoft
 
 | Version       |
 | ------------- |
-| [Java7](https://github.com/slothsoft/example-javafx-maven) |
+| [Java8](https://github.com/slothsoft/example-javafx-maven) |
+| [Java7](https://github.com/slothsoft/example-javafx-maven/tree/java7) |
    
 
 
@@ -49,9 +50,11 @@ Checkout this project and run the [MainApplication](https://github.com/slothsoft
 
 Recently I played around with JavaFX for a bit. Since there is a lot of conflicting information out there how it is used with Maven, I'm going to give a short tour of my findings. We'll create a simple Hello World application on the way.
 
+(**Note:** This tutorial was half-assed converted from Java 7 to Java 8, so... take everything with a grain of salt.)
+
 ### Ready...
 
-For this tutorial a functional Eclipse installation is needed. [M2E](https://eclipse.org/m2e/) is, too, so our Maven configuration can be used for compiling in Eclipse. And of course we should have a Java with JavaFX, which all of them have starting with JDK 7 Update 6. 
+For this tutorial a functional Eclipse installation is needed. [M2E](https://eclipse.org/m2e/) is, too, so our Maven configuration can be used for compiling in Eclipse. And of course we should have a Java with JavaFX, which JDK 8 has. 
 
 ### Set...
 
@@ -119,12 +122,11 @@ We have to put it there by ourselves, but in Maven it's quite simple to add depe
 			<artifactId>javafx</artifactId>
 			<version>2.2</version>
 			<scope>system</scope>
-			<systemPath>${java.home}/lib/jfxrt.jar</systemPath>
+			<systemPath>${java.home}/lib/ext/jfxrt.jar</systemPath>
 		</dependency>
 	</dependencies>
 ```
 
-**Note:** For Java 8 the system path seems to be `<systemPath>${java.home}/lib/ext/jfxrt.jar</systemPath>`.
 
 Amazingly, the class compiles. If it does not, you might want to check that your `JAVA_HOME` variable is set and points to a JDK (and not just a JRE). Windows users can use `Win + Pause` and "Advanced System Settings" to check their environment variables. Linux users should know how to do that on their OS, Mac users have no business programming anyway ;)
 
@@ -175,9 +177,9 @@ The quick and dirty way would be to add the JAR to the Manifest. Why is this not
 And even if we were to use a relative path and put the JavaFX JAR next to our application JAR we'd get an approach that probably wouldn't work once Java 8 is out.
 
 
-**Adding JavaFX to Manifest**
+~~**Adding JavaFX to Manifest**~~
 
-Let's remember what the original problem was: The JavaFX library is not part of the Java class path. So we could just change that. Just put the file *jre7/lib/jfxrt.jar* into *jre7/lib/ext* and your JavaFX application will work nicely. When Java 8 comes, nothing will have to change, because JavaFX will be part of the class path on default.
+Let's remember what the original problem was: The JavaFX library is not part of the Java class path. ~~When Java 8 comes, JavaFX will be part of the class path on default.~~ For some reason it isn't.
 
 
 **Creating a Virtual Class Path**
@@ -187,12 +189,10 @@ Before the left mouse button was invented, people used the command line to start
 java -cp "%JAVA_HOME%\jre\lib\ext\jfxrt.jar;hello-world-1.0.0.jar" de.slothsoft.helloworld.HelloWorld
 ```
 
-The benefit to that approach is that you can be able to support Java 7 via click on the BAT file and Java 8 via double click on the JAR at the same time. At least in theory, Java 6 applications didn't work on Java 7 as they should have, so there's always the question if Java 7 applications work on Java 8 without modifications.
 
+~~**Wait for Java 8**~~
 
-**Wait for Java 8**
-
-JavaFX is going to be officially released in Java 8, which should be available March 2014. It's not that long, and you won't need to add an additional dependency and it will start via double click. Your customers will have to update, though. And there is the possibility, as above, that something will go horrible, horrible wrong and Java 8 will not be unusable for half a year as Java 7 was. 
+~~JavaFX is going to be officially released in Java 8, which should be available March 2014. It's not that long, and you won't need to add an additional dependency and it will start via double click.~~ Yes, you will have to add additional dependencies.
 
 
 **Maven Plug-ins**
@@ -202,7 +202,7 @@ I found a [nice looking Maven plug-in](https://github.com/zonski/javafx-maven-pl
 
 #### Conclusion
 
-I guess at this point you have a working JAR file and are happy. If not, and you think this might due to a faulty setup, I put the created project here for a reason. And if everything fails, I'm always happy to help. Good luck, and let's hope Oracle will get Java 8 right on the first try! 
+I guess at this point you have a working JAR file and are happy. If not, and you think this might due to a faulty setup, I put the created project here for a reason. And if everything fails, I'm always happy to help. Good luck!
 
 
 ## License
