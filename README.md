@@ -32,7 +32,7 @@ You need at least **Java 7** or above to run the code.
 
 ### Using the Example
 
-Checkout this project and run the [MainApplication](https://github.com/slothsoft/example-javafx-maven/blob/master/src/main/java/de/slothsoft/helloworld/HelloWorld.java).
+Checkout this project and run the [MainApplication](https://github.com/slothsoft/example-javafx-maven/blob/java7/src/main/java/de/slothsoft/helloworld/HelloWorld.java).
      
           
 
