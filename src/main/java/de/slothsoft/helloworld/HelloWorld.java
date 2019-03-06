@@ -1,8 +1,6 @@
 package de.slothsoft.helloworld;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -32,13 +30,7 @@ public class HelloWorld extends Application {
 		greetingLabel.setLayoutX(10);
 		greetingLabel.setLayoutY(40);
 
-		button.setOnAction(new EventHandler<ActionEvent>() {
-
-			@Override
-			public void handle(ActionEvent event) {
-				greetingLabel.setText("Hello " + nameText.getText() + "!");
-			}
-		});
+		button.setOnAction(event -> greetingLabel.setText("Hello " + nameText.getText() + "!"));
 
 		final Group root = new Group();
 		root.getChildren().addAll(nameText, button, greetingLabel);
