@@ -1,6 +1,6 @@
 # JavaFX / Maven Example
 
-[![Build Status](https://travis-ci.org/slothsoft/example-javafx-maven.svg?branch=java7)](https://travis-ci.org/slothsoft/example-javafx-maven/tree/java7)
+[![Build Status](https://travis-ci.org/slothsoft/example-javafx-maven.svg?branch=java7)](https://travis-ci.org/slothsoft/example-javafx-maven/)
 
 - **Author:** [Stef Schulz](mailto:s.schulz@slothsoft.de)
 - **Repository:** <https://github.com/slothsoft/example-javafx-maven>
