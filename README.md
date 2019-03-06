@@ -41,7 +41,7 @@ Checkout this project and run the [MainApplication](https://github.com/slothsoft
 
 | Version       |
 | ------------- |
-| [Java8](https://github.com/slothsoft/example-javafx-maven) |
+| [Java7](https://github.com/slothsoft/example-javafx-maven) |
    
 
 
@@ -197,7 +197,7 @@ JavaFX is going to be officially released in Java 8, which should be available M
 
 **Maven Plug-ins**
 
-I found a (nice looking Maven plug-in)[https://github.com/zonski/javafx-maven-plugin] to achieve the packaging, but couldn't get it to work, so I decided it wasn't worth the time.
+I found a [nice looking Maven plug-in](https://github.com/zonski/javafx-maven-plugin) to achieve the packaging, but couldn't get it to work, so I decided it wasn't worth the time.
 
 
 #### Conclusion
