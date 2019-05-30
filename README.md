@@ -5,7 +5,6 @@
 - **Author:** [Stef Schulz](mailto:s.schulz@slothsoft.de)
 - **Repository:** <https://github.com/slothsoft/example-javafx-maven>
 - **Open Issues:** <https://github.com/slothsoft/example-javafx-maven/issues>
-- **Wiki:** <https://github.com/slothsoft/example-javafx-maven/wiki>
 
 This example shows how to create Hello World application using JavaFX and Maven. A step by step description can be found here.
 
